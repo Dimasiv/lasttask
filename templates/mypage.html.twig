@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    <title>Обо мне</title>
+</head>
+<body>
+    <h1 class="namehead">Хикматов дмитрий</h1>
+    <img class="leftimg" src="https://sun1-47.userapi.com/s/v1/ig2/yO16uNBRKfFZ_6okwq8u7Yj_16sch8-W_XtUwm-m768AZOFuwBNMpGIpCV-ocYGz4vq0awqoTXhdNaSFUCNxQjSS.jpg?size=200x0&quality=96&crop=23,0,1095,1495&ava=1" alt="MyPhoto">
+    <h2 class="afterhead">О себе:</h2>
+    <div class="text">
+        <p>
+            Учусь на первом курсе Волгатеха, направления "программная инженерия". До конца не понимаю что от меня требуется в этом задании, но уверен, что сразу, как узнаю, пойду доделывать.
+            Поэтому я просто сделаю, чтобы работало. Спасибо за внимание!
+        </p>
+    </div>
+    <h3 class="lasthead">Мои увлечения:</h3>
+    <ol class="list">
+        <li>cats</li>
+        <li>games</li>
+        <li>watching movies</li>
+    </ol>
+    <div class="connection">
+        <h4 class="last2hhead">Связь:</h4>
+         <ul>
+            <li><a href="https://vk.com/dimadergunov">VK</a></li>
+        </ul>
+    </div>
+
+    {% for name in hobbies %}
+        <p class="title">{{ name.header}} </p>
+        <div class="ant-carousel" id="{{ name.header }}">
+            <div class="ant-carousel-hider">
+                <ul class="ant-carousel-list">
+                    {% for image in name.images %}
+                        <li class="ant-carousel-element">
+                            <img class="ant-img" src="{{ image }}" alt="0">
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="ant-carousel-arrow-left"></div>
+            <div class="ant-carousel-arrow-right"></div>
+            <div class="ant-carousel-dots"></div>
+        </div>
+    {% endfor %}
+
+    <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('build/runtime.js') }}"></script>
+</body>
+</html>

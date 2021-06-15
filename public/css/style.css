@@ -1,0 +1,69 @@
+.leftimg
+{
+    float: left;
+    margin: 7px 90px 7px 7px;
+    width: 200px;
+    height: 275px;
+}
+
+.clearfix
+{
+    clear: both;
+}
+
+.namehead
+{
+    display: flex;
+    justify-content: center;
+    font: bold 48px/42px 'Open Sans', serif;
+    color: #333333;
+}
+
+.contacts
+{
+    margin-left: 300px;
+}
+
+.secondhead
+{
+    font: 36px/42px 'Open Sans', serif;
+    color: #333333;
+}
+
+.text
+{
+    font: 19px/32px Georgia, sans-serif;
+    color: #555555;
+}
+
+.thirdhead,
+.fourthhead
+{
+    font: 24px/32px 'Open Sans', serif;
+}
+
+.list
+{
+    margin-left: 300px;
+    font: 19px/36px Georgia, sans-serif;
+    color: #555555;
+}
+
+.block-for-slider
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hobbies__image
+{
+    width: 250px;
+    height: 150px;
+}
+
+.hobbies__header
+{
+    font: 24px/32px 'Open Sans', serif;
+    display: flex;
+    justify-content: center;
+}
